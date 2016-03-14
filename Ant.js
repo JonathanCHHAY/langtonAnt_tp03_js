@@ -6,7 +6,6 @@ function Ant(board, x, y) {
 		this.x = x;
 		this.y = y;
 		
-		board.invertColorCase(y, x);
 }
 
 Ant.prototype.turnLeft = function() {
@@ -31,7 +30,45 @@ Ant.prototype.turnRight = function() {
 
 Ant.prototype.move = function() {
 	if(this.board.isBlack(this.y, this.x)) {
+		this.turnRight();
+		
+	} else {
 		this.turnLeft();
+	}
+	
+	this.board.invertColorCase(this.y, this.x);
+	
+	this.stepForward();
+} ;
+
+Ant.prototype.stepForward = function() {
+	switch (this.orientation) {
+	case N:
+		if(this.y > 0) {
+			this.y--;
+		}
+		break;
+		
+	case E:
+		if(this.x < this.board.size) {
+			this.x++;
+		}
+		break;
+		
+	case S:
+		if(this.y < this.board.size) {
+			this.y++;
+		}
+		break;
+		
+	case O:
+		if(this.x > 0) {
+			this.x--;
+		}
+		break;
+
+	default:
+		break;
 	}
 } ;
 
