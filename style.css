@@ -1,15 +1,13 @@
 @CHARSET "UTF-8";
 
 body {
-	background-color: #d3d7cf;
-}
-
-#chess {
-	border: solid black 5px;
+	background-color: #FFFFFF;
 }
 
 td {
 	background-color: #FFFFFF;
+	width: 5px;
+	height: 5px;
 }
 
 .black {

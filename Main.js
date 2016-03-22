@@ -1,16 +1,17 @@
 window.onload = function() {
 	console.log("Start");
-	var boardJS = new Board(20);
+	var boardJS = new Board(100);
 	console.log("GridSize = " + boardJS.size);
 	var ant = new Ant(boardJS, boardJS.size / 2, boardJS.size / 2);
 	ant.move();
 	console.log("orientation : " + ant.orientation);
 	console.log("coord : " + ant.x + " " + ant.y);
-	//window.setInterval(ant.test, 500);
 	
-	for (var i = 0 ; i < 10000 ; i++ ) {
+	setInterval(function() {
 		ant.move();
-	}
+		
+		
+	}, 1)
 	
 	//console.log(boardJS.isBlack(0, 0));
 
