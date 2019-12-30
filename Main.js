@@ -5,7 +5,8 @@ window.onload = function() {
 	const sizeOfBoard = 100;
 
 	var board = new Board(emptyBoard, sizeOfBoard);
-	//console.log(board.getCellByIndexes(1,1));
+	var cell = board.getCellByIndexes(1,1);
+	console.log(board.isCellBlack(cell));
 
 	/*
 

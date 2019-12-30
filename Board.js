@@ -15,7 +15,7 @@ class Board {
 			board += '<tr> \n';
 
 			for (var j = 0; j < this.size; j++) {
-				board += '<td id="cell' + '-c' + j + '-l' + i + '"></td> \n';
+				board += '<td id="cell' + '-c' + j + '-l' + i + '"class="white"></td> \n';
 			}
 
 			board += '</tr> \n';
@@ -31,28 +31,26 @@ class Board {
 		return cell; 
 	}
 
+	/*
 	invertColorCase(i, j) {
-		/*if (i < this.size && j < this.size) {
-			$().toggleClass("black");
+		if (i < this.size && j < this.size) {
+			var cell = getCellByIndexes(i,j);
+			cell.class = "black"
 			return true;
 		}
 	
-		return false;*/
+		return false;
 	}
+	*/
+
+	isCellBlack(cell) {
+		var color = cell.getAttribute("class");
+		
+		if (color == "black") {
+			return true;
+		}
+
+		return false;
+	};
 
 }
-
-/*
-
-
-
-Board.prototype.isBlack = function(i, j) {
-	var cell = $("td#cell-c" + j + "-l" + i)
-
-	if (cell.hasClass("black")) {
-		return true;
-	}
-
-	return false;
-};
-*/
