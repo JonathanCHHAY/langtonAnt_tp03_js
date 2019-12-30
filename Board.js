@@ -1,25 +1,34 @@
-function Board(size) {
-	this.size = size;
-	this.generate();
-}
 
-Board.prototype.generate = function() {
 
-	var boardJS = "";
+class Board {
 
-	for (var i = 0; i < this.size; i++) {
-		boardJS += '<tr> \n';
-
-		for (var j = 0; j < this.size; j++) {
-			boardJS += '<td id="cell' + '-c' + j + '-l' + i + '"></td> \n';
-		}
-
-		boardJS += '</tr> \n';
+	constructor(emptyBoard, size) {
+		this.size = size;
+		this.board = emptyBoard;
+		this.generate(this.board);
 	}
 
-	$("#board").html(boardJS);
-	console.log("Board generated");
-};
+	generate(emptyBoard) {
+		var board = "";
+		
+		for (var i = 0; i < this.size; i++) {
+			board += '<tr> \n';
+
+			for (var j = 0; j < this.size; j++) {
+				board += '<td id="cell' + '-c' + j + '-l' + i + '"></td> \n';
+			}
+
+			board += '</tr> \n';
+
+		}
+
+		emptyBoard.innerHTML = board;
+		console.log("[OK] Board generated");
+	}
+
+}
+
+/*
 
 Board.prototype.invertColorCase = function(i, j) {
 	if (i < this.size && j < this.size) {
@@ -39,3 +48,4 @@ Board.prototype.isBlack = function(i, j) {
 
 	return false;
 };
+*/

@@ -1,6 +1,14 @@
 window.onload = function() {
+
 	console.log("Start");
-	var boardJS = new Board(100);
+	var emptyBoard = document.getElementById("board");
+	const sizeOfBoard = 100;
+
+	var board = new Board(emptyBoard, sizeOfBoard);
+
+	/*
+
+
 	console.log("GridSize = " + boardJS.size);
 	var ant = new Ant(boardJS, boardJS.size / 2, boardJS.size / 2);
 	ant.move();
@@ -12,6 +20,7 @@ window.onload = function() {
 		
 		
 	}, 1)
+	*/
 	
 	//console.log(boardJS.isBlack(0, 0));
 
