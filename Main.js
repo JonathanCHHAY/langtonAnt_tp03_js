@@ -5,6 +5,7 @@ window.onload = function() {
 	const sizeOfBoard = 100;
 
 	var board = new Board(emptyBoard, sizeOfBoard);
+	//console.log(board.getCellByIndexes(1,1));
 
 	/*
 

@@ -26,18 +26,25 @@ class Board {
 		console.log("[OK] Board generated");
 	}
 
+	getCellByIndexes(i, j) {
+		var cell = document.getElementById("cell-c" + j + "-l" + i)
+		return cell; 
+	}
+
+	invertColorCase(i, j) {
+		/*if (i < this.size && j < this.size) {
+			$().toggleClass("black");
+			return true;
+		}
+	
+		return false;*/
+	}
+
 }
 
 /*
 
-Board.prototype.invertColorCase = function(i, j) {
-	if (i < this.size && j < this.size) {
-		$("td#cell-c" + j + "-l" + i).toggleClass("black");
-		return true;
-	}
 
-	return false;
-};
 
 Board.prototype.isBlack = function(i, j) {
 	var cell = $("td#cell-c" + j + "-l" + i)
