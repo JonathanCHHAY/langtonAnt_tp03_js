@@ -31,18 +31,6 @@ class Board {
 		return cell; 
 	}
 
-	/*
-	invertColorCase(i, j) {
-		if (i < this.size && j < this.size) {
-			var cell = getCellByIndexes(i,j);
-			cell.class = "black"
-			return true;
-		}
-	
-		return false;
-	}
-	*/
-
 	isCellBlack(cell) {
 		var color = cell.getAttribute("class");
 		
@@ -51,6 +39,16 @@ class Board {
 		}
 
 		return false;
-	};
+	}
+
+	invertCellColor(cell) {
+
+		if (this.isCellBlack(cell) == true) {
+			cell.setAttribute("class", "white");
+		}
+		else {
+			cell.setAttribute("class", "black");
+		}
+	}
 
 }
