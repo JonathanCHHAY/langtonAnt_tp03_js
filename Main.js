@@ -5,9 +5,10 @@ window.onload = function() {
 	const sizeOfBoard = 100;
 
 	var board = new Board(emptyBoard, sizeOfBoard);
-	var cell = board.getCellByIndexes(2,1);
-	board.invertCellColor(cell);
-	console.log(board.isCellBlack(cell));
+	var cell = board.getCellByIndexes(1,1);
+	console.log(cell);
+	//board.invertCellColor(cell);
+	//console.log(board.isCellBlack(cell));
 
 	/*
 

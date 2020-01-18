@@ -1,5 +1,3 @@
-
-
 class Board {
 
 	constructor(emptyBoard, size) {
@@ -32,6 +30,10 @@ class Board {
 	}
 
 	isCellBlack(cell) {
+		if (cell == null) {
+			return null;
+		}
+
 		var color = cell.getAttribute("class");
 		
 		if (color == "black") {
@@ -42,6 +44,9 @@ class Board {
 	}
 
 	invertCellColor(cell) {
+		if (cell == null) {
+			return false;
+		}
 
 		if (this.isCellBlack(cell) == true) {
 			cell.setAttribute("class", "white");
@@ -49,6 +54,8 @@ class Board {
 		else {
 			cell.setAttribute("class", "black");
 		}
+
+		return true;
 	}
 
 }
