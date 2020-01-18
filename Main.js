@@ -10,21 +10,20 @@ window.onload = function() {
 	//board.invertCellColor(cell);
 	//console.log(board.isCellBlack(cell));
 
-	/*
-
-
-	console.log("GridSize = " + boardJS.size);
-	var ant = new Ant(boardJS, boardJS.size / 2, boardJS.size / 2);
-	ant.move();
-	console.log("orientation : " + ant.orientation);
-	console.log("coord : " + ant.x + " " + ant.y);
+	console.log("GridSize = " + board.size);
+	var ant = new Ant(board, board.size / 2, board.size / 2);
+	//ant.move();
+	//console.log("orientation : " + ant.orientation);
+	//console.log("coord : " + ant.x + " " + ant.y);
 	
+	/*
 	setInterval(function() {
 		ant.move();
 		
 		
 	}, 1)
 	*/
+	
 	
 	//console.log(boardJS.isBlack(0, 0));
 

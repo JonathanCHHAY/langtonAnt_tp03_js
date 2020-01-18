@@ -1,13 +1,20 @@
 var N = 0, E = 1, S = 2, O = 3;
 
-function Ant(board, x, y) {
+class Ant {
+
+	constructor (board, x, y) {
 		this.board = board;
 		this.orientation = N;
 		this.x = x;
 		this.y = y;
-		
+
+		var cell = this.board.getCellByIndexes(this.x, this.y);
+		board.invertCellColor(cell);
+	}
+
 }
 
+/*
 Ant.prototype.turnLeft = function() {
 	if(this.orientation > N) {
 		this.orientation--;
@@ -71,4 +78,4 @@ Ant.prototype.stepForward = function() {
 		break;
 	}
 } ;
-
+*/
