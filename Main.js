@@ -13,8 +13,8 @@ window.onload = function() {
 	console.log("GridSize = " + board.size);
 	var ant = new Ant(board, board.size / 2, board.size / 2);
 	//ant.move();
-	//console.log("orientation : " + ant.orientation);
-	//console.log("coord : " + ant.x + " " + ant.y);
+	console.log("orientation : " + ant.getStringOrientation());
+	console.log("coord : " + ant.x + " " + ant.y);
 	
 	/*
 	setInterval(function() {

@@ -1,4 +1,4 @@
-var N = 0, E = 1, S = 2, O = 3;
+const N = 0, E = 1, S = 2, O = 3;
 
 class Ant {
 
@@ -12,28 +12,38 @@ class Ant {
 		board.invertCellColor(cell);
 	}
 
+	turnLeft() {
+		if(this.orientation > N) {
+			this.orientation--;
+			
+		} else {
+			this.orientation = O;
+		}
+	}
+
+	turnRight() {
+		if(this.orientation < O) {
+			this.orientation++;
+			
+		} else {
+			this.orientation = N;
+		}
+	}
+	
+	getStringOrientation() {
+		switch (this.orientation) {
+			case N: return "N";
+			case E: return "E";
+			case S: return "S";
+			case O: return "O";
+			default: return null;
+		}
+	}
+
 }
 
-/*
-Ant.prototype.turnLeft = function() {
-	if(this.orientation > N) {
-		this.orientation--;
-		
-	} else {
-		this.orientation = O;
-	}
-	
-} ;
 
-Ant.prototype.turnRight = function() {
-	if(this.orientation < O) {
-		this.orientation++;
-		
-	} else {
-		this.orientation = N;
-	}
-	
-} ;
+/*
 
 Ant.prototype.move = function() {
 	if(this.board.isBlack(this.y, this.x)) {
