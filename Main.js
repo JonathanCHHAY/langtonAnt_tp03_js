@@ -12,60 +12,13 @@ window.onload = function() {
 
 	console.log("GridSize = " + board.size);
 	var ant = new Ant(board, board.size / 2, board.size / 2);
-	//ant.move();
-	console.log("orientation : " + ant.getStringOrientation());
-	console.log("coord : " + ant.x + " " + ant.y);
+
+
+	//console.log("orientation : " + ant.getStringOrientation());
+	//console.log("coord : " + ant.x + " " + ant.y);
 	
-	/*
 	setInterval(function() {
 		ant.move();
-		
-		
 	}, 1)
-	*/
-	
-	
-	//console.log(boardJS.isBlack(0, 0));
-
-	/*
-	ant.stepForward();
-	boardJS.invertColorCase(ant.y, ant.x);
-	ant.stepForward();
-	boardJS.invertColorCase(ant.y, ant.x);
-	ant.stepForward();
-	boardJS.invertColorCase(ant.y, ant.x);
-	*/
-	
-	/*
-	console.log("test turnLeft")
-	console.log(ant.orientation);
-	ant.turnLeft()
-	console.log(ant.orientation);
-	ant.turnLeft()
-	console.log(ant.orientation);
-	ant.turnLeft()
-	console.log(ant.orientation);
-	ant.turnLeft()
-	console.log(ant.orientation);
-	ant.turnLeft()
-	console.log(ant.orientation);
-	*/
-	
-	/*
-	console.log("test turnRight")
-	console.log(ant.orientation);
-	ant.turnRight()
-	console.log(ant.orientation);
-	ant.turnRight()
-	console.log(ant.orientation);
-	ant.turnRight()
-	console.log(ant.orientation);
-	ant.turnRight()
-	console.log(ant.orientation);
-	ant.turnRight()
-	console.log(ant.orientation);
-	*/
-	
-	//console.log(boardJS.invertColorCase(30, 30));
 }
 

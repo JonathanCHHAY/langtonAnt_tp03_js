@@ -7,9 +7,8 @@ class Ant {
 		this.orientation = N;
 		this.x = x;
 		this.y = y;
-
-		var cell = this.board.getCellByIndexes(this.x, this.y);
-		board.invertCellColor(cell);
+		this.cell = this.board.getCellByIndexes(this.x, this.y);
+		this.board.invertCellColor(this.cell);
 	}
 
 	turnLeft() {
@@ -40,52 +39,49 @@ class Ant {
 		}
 	}
 
+	stepForward() {
+		switch (this.orientation) {
+		case N:
+			if(this.y > 0) {
+				this.y--;
+			}
+			break;
+			
+		case E:
+			if(this.x < this.board.size) {
+				this.x++;
+			}
+			break;
+			
+		case S:
+			if(this.y < this.board.size) {
+				this.y++;
+			}
+			break;
+			
+		case O:
+			if(this.x > 0) {
+				this.x--;
+			}
+			break;
+	
+		default:
+			break;
+		}
+
+		this.cell = this.board.getCellByIndexes(this.x, this.y);
+	}
+
+	move() {
+		if(this.board.isCellBlack(this.cell)) {
+			this.turnRight();
+			
+		} else {
+			this.turnLeft();
+		}
+		this.board.invertCellColor(this.cell);
+
+		this.stepForward();
+	} ;
+
 }
-
-
-/*
-
-Ant.prototype.move = function() {
-	if(this.board.isBlack(this.y, this.x)) {
-		this.turnRight();
-		
-	} else {
-		this.turnLeft();
-	}
-	
-	this.board.invertColorCase(this.y, this.x);
-	
-	this.stepForward();
-} ;
-
-Ant.prototype.stepForward = function() {
-	switch (this.orientation) {
-	case N:
-		if(this.y > 0) {
-			this.y--;
-		}
-		break;
-		
-	case E:
-		if(this.x < this.board.size) {
-			this.x++;
-		}
-		break;
-		
-	case S:
-		if(this.y < this.board.size) {
-			this.y++;
-		}
-		break;
-		
-	case O:
-		if(this.x > 0) {
-			this.x--;
-		}
-		break;
-
-	default:
-		break;
-	}
-} ;
-*/
