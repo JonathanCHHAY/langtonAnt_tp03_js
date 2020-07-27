@@ -82,6 +82,6 @@ class Ant {
 		this.board.invertCellColor(this.cell);
 
 		this.stepForward();
-	} ;
+	}
 
 }

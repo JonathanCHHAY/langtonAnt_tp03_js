@@ -17,8 +17,13 @@ window.onload = function() {
 	//console.log("orientation : " + ant.getStringOrientation());
 	//console.log("coord : " + ant.x + " " + ant.y);
 	
-	setInterval(function() {
-		ant.move();
-	}, 1)
+	startAnt();
+
+	function startAnt() {
+		setInterval(function() {
+			ant.move();
+		}, 1)
+	}
+
 }
 
